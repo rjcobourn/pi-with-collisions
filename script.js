@@ -1,21 +1,23 @@
 /* eslint no-undef: 0 */
 const width = 800;
 const height = 600;
-let digits = 4;
-let timeSteps = Math.pow(10, digits+1);
-let m1 = 10;
-let m2 = Math.pow(100, digits)*10;
-let x1 = 100;
-let x2 = 400;
-let v1 = 0;
-let v2 = -10/timeSteps;
-let w1 = Math.log10(m1)*15;
-let w2 = Math.log10(m2)*15;
-let count = 0;
+let digits = 0;
+let timeSteps;
+let m1;
+let m2;
+let x1;
+let x2;
+let v1;
+let v2;
+let w1;
+let w2;
+let count;
+
 var clack;
 
 function preload() {
   clack = loadSound("https://cdn.glitch.com/90674e42-dbc8-4f13-83af-5d0ee7baae82%2Fclack.ogg")
+  reset();
 }
 function setup() {
   createCanvas(width, height);
