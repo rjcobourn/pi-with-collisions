@@ -57,6 +57,8 @@ function draw() {
 }
 
 function reset() {
+  digits = int(document.getElementById("digits").value);
+  timeSteps = Math.pow(10, digits+1);
   m1 = 10;
   m2 = Math.pow(100, digits)*10;
   x1 = 100;
