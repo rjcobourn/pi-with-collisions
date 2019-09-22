@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */
 const width = 800;
 const height = 600;
 let digits = 4;
