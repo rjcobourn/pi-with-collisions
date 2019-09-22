@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */
 const width = 800;
 const height = 600;
 let digits = 4;
@@ -53,4 +54,24 @@ function draw() {
     x2 += v2*(deltaTime/60);
   }
   
+}
+
+function reset() {
+  digits = int(document.getElementById("digits").value);
+  timeSteps = Math.pow(10, digits+1);
+  m1 = 10;
+  m2 = Math.pow(100, digits)*10;
+  x1 = 100;
+  x2 = 400;
+  v1 = 0;
+  v2 = -10/timeSteps;
+  w1 = Math.log10(m1)*15;
+  w2 = Math.log10(m2)*15;
+  count = 0;
+}
+
+function keyTyped() {
+  if (key === "r") {
+    reset();
+  }
 }
