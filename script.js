@@ -55,3 +55,21 @@ function draw() {
   }
   
 }
+
+function reset() {
+  m1 = 10;
+  m2 = Math.pow(100, digits)*10;
+  x1 = 100;
+  x2 = 400;
+  v1 = 0;
+  v2 = -10/timeSteps;
+  w1 = Math.log10(m1)*15;
+  w2 = Math.log10(m2)*15;
+  count = 0;
+}
+
+function keyTyped() {
+  if (key === "r") {
+    reset();
+  }
+}
